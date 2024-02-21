@@ -1,3 +1,3 @@
-from App import thread_run
+from app import thread_run
 
 thread_run()
