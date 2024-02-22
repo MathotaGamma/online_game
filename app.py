@@ -18,6 +18,13 @@ def error_handler(error):
 
 
 
+@app.route("/sitemap.xml")
+def sitemap():
+    return app.send_static_file("sitemap.xml")
+
+
+
+
 @app.route('/')
 def home():
   return render_template('home_page.html')
