@@ -12,8 +12,8 @@ app.secret_key = 'math'
 @app.errorhandler(OSError)
 @app.errorhandler(404)
 def error_handler(error):
-  
-  return 'Error'
+  print(error)
+  return redirect(url_for('home'))
 
 
 
@@ -21,6 +21,24 @@ def error_handler(error):
 @app.route('/')
 def home():
   return render_template('home_page.html')
+
+
+
+
+@app.route('/login')
+def login():
+  print('hey')
+  return render_template('login.html')
+
+
+@app.route('/OnlineGame/list')
+def online_list():
+  return render_template('OnlineGame/list.html')
+
+
+@app.route('/OnlineGame/play/<repository>')
+def play(repository):
+  return render_template('OnlineGame/play/'+repository)
 
 
 @socketio.on('tetris')
