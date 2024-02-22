@@ -33,7 +33,7 @@ def tetris(data):
 
 
 def run():
-  socketio.run(app,host="0.0.0.0",port=8080)
+  socketio.run(app,host="0.0.0.0",port=8080,allow_unsafe_werkzeug=True)
 def thread_run():
   t = Thread(target=run)
   t.start()
