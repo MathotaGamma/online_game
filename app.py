@@ -4,6 +4,7 @@ from flask_socketio import SocketIO, emit, join_room, leave_room, send
 
 app = Flask('')
 socketio = SocketIO(app,cors_allowed_origins="*")
+UPLOAD_FOLDER = 'upload_files'
 app.config['SECRET_KEY'] = 'test'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = 'math'
