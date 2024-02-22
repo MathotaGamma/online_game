@@ -15,7 +15,10 @@ def error_handler(error):
   
   return 'Error'
 
-@app.route('home')
+
+
+
+@app.route('/')
 def home():
   return render_template('home_page.html')
 
