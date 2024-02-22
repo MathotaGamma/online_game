@@ -6,7 +6,7 @@ app = Flask('')
 socketio = SocketIO(app,cors_allowed_origins="*")
 app.config['SECRET_KEY'] = 'test'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.secret_key = os.'math'
+app.secret_key = 'math'
 
 @app.errorhandler(OSError)
 @app.errorhandler(404)
