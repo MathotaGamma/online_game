@@ -32,6 +32,13 @@ def home():
 
 
 
+
+@app.route('google7ee5392f62f69585.html')
+def google_search_console():
+  return render_template('google7ee5392f62f69585.html')
+
+
+
 @app.route('/login')
 def login():
   print('hey')
