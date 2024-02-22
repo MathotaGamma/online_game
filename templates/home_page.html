@@ -1,1 +1,46 @@
-Hello!
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      if(localStorage.getItem("Name") == null) window.location.href = "/login";
+    </script>
+    <style>
+      html,body {
+        width: 100%;
+        height: 100%;
+        background: #afe;
+      }
+      #main {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 40% 40%;
+      }
+      #name {
+        width: 100%;
+        height: 100%;
+        grid-row: 1 / 2;
+        display: block;
+        text-align: center;
+      }
+    </style>
+    <title>online-game:HomePage</title>
+  </head>
+  <body>
+    <div id="main">
+      <h1 id="name"></h1>
+      <div class="explain">
+        <b>online-gameへようこそ!</b>
+        <br>
+        <a href="./OnlineGame/list">OnlineGame</a>
+        ではオンラインゲームを遊べます。<br>
+        Libraryでは他の人が作ったゲームで遊んだりできます。
+      </div>
+    </div>
+    <script>
+      document.getElementById('name').innerHTML = localStorage.getItem("Name")+"さん、こんにちは！";
+    </script>
+  </body>
+</html>

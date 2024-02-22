@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>online-game:LogIn</title>
+  </head>
+  <body>
+    ログインはこちらから
+    <br><label>名前:<input type="text" id="name_text" placeholder="Name"></label>
+    <input type="button" id="submit_button" value="送信" onclick="get_submit()">
+    <script>
+      if(localStorage.getItem('Name') != null) window.location.href = '../';
+      function get_submit(){
+        let get_text = document.getElementById('name_text').value
+        if(get_text != null){
+          localStorage.setItem('Name',get_text);
+          window.location.href = "/";
+        }
+      }
+    </script>
+  </body>
+</html>
